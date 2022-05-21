@@ -205,7 +205,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         print ('Start: test_get_table')
         from src.todoList import get_table
         tableName = os.environ['DYNAMODB_TABLE'];
-        table = get_table(self.dynamodb)
+        table = get_table()
         # check if the table name is 'ToDo'
         self.assertIn(tableName, table.name)
         print ('End: test_get_table')
