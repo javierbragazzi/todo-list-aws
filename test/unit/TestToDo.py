@@ -209,6 +209,16 @@ class TestDatabaseFunctions(unittest.TestCase):
         # check if the table name is 'ToDo'
         self.assertIn(tableName, table.name)
         print ('End: test_get_table')
+        
+    def test_get_translation_todo(self):
+        print ('---------------------')
+        print ('Start: test_get_translation_todo')
+
+        from src.todoList import get_translation
+
+        translation = get_translation(self.text, "en")
+        self.assertEqual(self.text, "Learn DevOps and Cloud at UNIR")
+        print ('End: test_get_translation_todo')
 
 
 if __name__ == '__main__':
