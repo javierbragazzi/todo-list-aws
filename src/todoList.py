@@ -158,6 +158,6 @@ def get_translation(text, language, dynamodb=None):
     except ClientError as e:  # pragma: no cover
         print(e.response['Error']['Message'])
     else:
-        print('Result get_translation:'+str(translation))
-        if 'Translation' in translation:
-            return translation['Translation']
+        text = translation.get('TranslatedText')
+        print('Result get_translation:'+str(text))
+        return text
