@@ -225,7 +225,7 @@ class TestApi(unittest.TestCase):
         jsonbody = response.json()
         print('Response Translate todo: ' + str(jsonbody))
         self.assertEqual(
-            response.status_code, 200, "Error en la petición API a {url}"
+            response.status_code, 200, "Error en la petición API translate a {url}"
         )
         self.assertEqual(
             jsonbody, "Beispiel für Integrationst", "Error en la petición API a {url}"
