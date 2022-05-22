@@ -3,7 +3,7 @@ import decimalencoder
 import todoList
 
 
-def get(event, context):
+def translate(event, context):
     # create a response
     item = todoList.get_item(event['pathParameters']['id'])
     translation = todoList.get_translation(item['text'],
